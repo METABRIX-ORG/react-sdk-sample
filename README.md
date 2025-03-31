@@ -1,12 +1,12 @@
-# Laptop Store - Single Page Application
+# Ultron SDK Demo - Single Page Application as sample for SDK integration
 
-This project is a responsive single-page application for a laptop store, built using React and Vite. It provides an interactive interface for users to browse and add laptops to their shopping cart.
+This project is a responsive single-page application of a laptop store showing quick integration with ultron-ai-sdk (The 3D Character companion of you website), built using React and Vite. It provides an interactive interface for users to test the capablities of Ultron AI Characters.
 
 ## Features
 
-- **Product Showcase:** Displays a selection of laptops with descriptions and an "Add to Cart" functionality.
-- **Shopping Cart:** Keeps track of the number of items added to the cart.
-- **Responsive Design:** Ensures optimal viewing on various devices using Tailwind CSS.
+- **Controller speach:** Make character say what you want.
+- **Chat with AI:** Ask quesries to character and it will respond as per back story provided.
+
 
 ## Technologies Used
 
@@ -25,14 +25,14 @@ This project is a responsive single-page application for a laptop store, built u
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/laptop-store.git
+   git clone https://github.com/METABRIX-ORG/react-sdk-sample.git
    ```
 
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd laptop-store
+   cd react-sdk-sample
    ```
 
 
@@ -75,35 +75,7 @@ This project is a responsive single-page application for a laptop store, built u
 
   This command previews the production build locally.
 
-## Project Structure
 
-
-```bash
-laptop-store/
-├── public/
-│   └── index.html
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── App.jsx
-│   └── main.jsx
-├── .gitignore
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-└── vite.config.js
-```
-
-
-- **`public/`**: Contains static assets and the main HTML file.
-- **`src/`**: Contains the React components and main application files.
-- **`assets/`**: Directory for images and other asset files.
-- **`components/`**: Directory for reusable React components.
-- **`.gitignore`**: Specifies files and directories to be ignored by Git.
-- **`package.json`**: Lists project dependencies and scripts.
-- **`tailwind.config.js`**: Configuration file for Tailwind CSS.
-- **`postcss.config.js`**: Configuration file for PostCSS.
-- **`vite.config.js`**: Configuration file for Vite.
 
 ## Contributing
 

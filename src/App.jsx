@@ -15,9 +15,9 @@ function App() {
   const init = async() => {
     sceneCanvas.current = new SceneCanvas('target-html-element')
     const initializationSetting= {
-      avatarId: "67458cad67f084b3647ff82e",
+      avatarId: "AVATAR_ID",
       config:{
-        apiKey: "b785864ee936103438cdfee62fcd07f3"
+        apiKey: "YOUR_API_KEY"
       },
       options:{
           hideClickMessage: true, //remove default "Click message" on the avatar
