@@ -9,10 +9,6 @@ let prevCart = 0
 
 function App() {
   const [cart, setCart] = useState(0);
-  let config = {
-
-  }
-
   const sceneCanvas = useRef(null)
   const character = useRef(null)
 
