@@ -43,6 +43,20 @@ This project is a responsive single-page application of a laptop store showing q
    ```
 
 
+## Setting up API and Avatar
+
+Please add your avatarId and apiKey in App.jsx file 
+
+### Adding values
+
+```javascript
+
+const avatarId = "YOUR AVATAR ID"
+const apiKey = "YOUR_API_KEY"
+
+```
+You can find the instructions to find avatarId and apiKey here ->[SDK Guide](https://www.npmjs.com/package/ultron-ai-sdk)
+
 ### Running the Application
 
 - **Development Server:**

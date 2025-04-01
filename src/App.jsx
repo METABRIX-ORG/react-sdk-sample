@@ -7,17 +7,22 @@ import {SceneCanvas, Character} from 'ultron-ai-sdk';
         
 let prevCart = 0
 
+const avatarId = null // Put the avatarId of the character you want to use
+const apiKey = null // Put your API key here
+// visit https://www.npmjs.com/package/ultron-ai-sdk to see instructions on how to get your avatarId and apiKey
+
 function App() {
   const [cart, setCart] = useState(0);
   const sceneCanvas = useRef(null)
   const character = useRef(null)
 
   const init = async() => {
+    if(!avatarId || !apiKey) return alert("Please provide your avatarId and apiKey")
     sceneCanvas.current = new SceneCanvas('target-html-element')
     const initializationSetting= {
-      avatarId: "AVATAR_ID",
+      avatarId: avatarId,
       config:{
-        apiKey: "YOUR_API_KEY"
+        apiKey: apiKey
       },
       options:{
           hideClickMessage: true, //remove default "Click message" on the avatar
@@ -26,10 +31,11 @@ function App() {
   }
     await sceneCanvas.current.init(initializationSetting)
     character.current = sceneCanvas.current.character
-    if(character.current){
-      character.current.say("Hello, I am Ultron AI conversational avatar.")
-    }
+    // character.say() or .chat() should always be called after user any interaction
+
     // character.current.say("Your custom message.")
+
+    // character.current.chat("Can you help me choose the right laptop?")
                 
 }
 
@@ -43,6 +49,7 @@ function App() {
   }, [cart])
 
   useEffect(() => {
+    if(!sceneCanvas.current) 
     init()
   }, [])
 
