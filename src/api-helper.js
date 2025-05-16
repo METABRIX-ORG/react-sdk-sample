@@ -2,7 +2,7 @@
 
 const rebelApiToken = "5aff6fe70d24d2c1dab55cbc4c4cf9ff8cefeb86"
 const userKey = "pratik@metabrixlab.com"
-const chatbotId = "21365"
+const chatbotId = "0693fff9-df0d-4b47-aa47-3f9406c90bb9"
 
 
 export async function chatWithRebelAI(query) {
