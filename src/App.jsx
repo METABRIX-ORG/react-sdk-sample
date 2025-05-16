@@ -4,17 +4,12 @@ import './App.css'
 import image1 from './assets/laptop1.jpg'
 import image2 from './assets/laptop2.jpg'
 import {SceneCanvas, Character} from 'ultron-ai-sdk';        
-import { chatWithRebelAI, getTextFromAudio } from './api-helper';
         
 let prevCart = 0
 
-const avatarId = '6818ca5a75c69bcc27eba16e' // Put the avatarId of the character you want to use
-const apiKey = "890d540e9d04568da08eee853a4c1053" // Put your API key here
+const avatarId = null // Put the avatarId of the character you want to use
+const apiKey = null // Put your API key here
 // visit https://www.npmjs.com/package/ultron-ai-sdk to see instructions on how to get your avatarId and apiKey
-
-
-
-
 
 function App() {
   const [cart, setCart] = useState(0);
@@ -41,30 +36,8 @@ function App() {
     // character.current.say("Your custom message.")
 
     // character.current.chat("Can you help me choose the right laptop?")
-    character.current.setAudioInputDevice('285add23860ab512a9d554f0160a81711fb0c721f187be8eb8af7dfe34ad1ea3')
-    character.current.audioListener.onSpeechEnd=(audioBlob)=>{
-      character.current.onSpeakComplete()
-      processAudio(audioBlob)
-    }
                 
- }
-  const processAudio=async(audioBlob)=>{   
-    console.log('audio',audioBlob)
-    let message = await getTextFromAudio(audioBlob)
-    if(message)
-    newChat(message)
-
-  }
-
-  const newChat=async (message)=>{
-    console.log('message', message)
-    let response = await chatWithRebelAI(message)
-    console.log(response)
-    if(response?.data?.answer){
-        character.current.say(response.data.answer)
-    
-    }
-  }
+}
 
   useEffect(() => {
     if(cart !== prevCart) {
