@@ -64,11 +64,8 @@ function App() {
     character.AIWrapperMode = true
     character.onSpeechTranscribed = (text) => {
       newChat(text)
-    }
-    
-                
+    }           
  }
-
 
   const newChat=async (message)=>{
     console.log('message', message)
@@ -76,8 +73,7 @@ function App() {
     console.log(response)
     const aiReply = response.choices[0].message.content;
     if(aiReply){
-        character.current.say(aiReply)
-    
+        character.current.say(aiReply)    
     }
   }
 

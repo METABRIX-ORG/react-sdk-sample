@@ -89,7 +89,33 @@ You can find the instructions to find avatarId and apiKey here ->[SDK Guide](htt
 
   This command previews the production build locally.
 
+## Using with your own AI service
 
+PLease check src/example/AIWrapperMode.jsx to implment Ultron SDK with you own AI service
+
+```javascript
+
+... after obtaining character object
+
+  character.AIWrapperMode = true
+    character.onSpeechTranscribed = (text) => {
+      newChat(text)
+    }           
+ }
+
+  // use transcribe text from user audio to send to your own AI service
+  const newChat=async (message)=>{
+    console.log('message', message)
+    let response = await chatWithAnyAI(message)
+    console.log(response)
+    const aiReply = response.choices[0].message.content;
+    if(aiReply){
+        // character.say() will make avatar speak out your AI response text
+        character.current.say(aiReply)    
+    }
+  }
+
+```
 
 ## Contributing
 
